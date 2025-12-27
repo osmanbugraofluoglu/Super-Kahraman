@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekibe Katılım Formu</title>
+</head>
+<body>
+
+    <header>
+        <h1>Ekibe Katılman İçin Sabırsızlanıyoruz!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="maceralar.html">Efsanevi Maceralar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>Başvuru Bilgilerinizi Girin</h2>
+
+        <form action="/submit_application" method="POST">
+            
+            <fieldset>
+                <legend>Kişisel ve Kahramanlık Bilgileri</legend>
+                
+                <p>
+                    <label for="isim">İsim ve Soyisim:</label><br>
+                    <input type="text" id="isim" name="isim" placeholder="Gerçek adınızı girin" required>
+                </p>
+
+                <p>
+                    <label for="kahramanAdi">Süper Kahraman Adınız:</label><br>
+                    <input type="text" id="kahramanAdi" name="kahramanAdi" placeholder="Örneğin: Laz Ziya, Tehlike61 gibi..." required>
+                </p>
+
+                <p>
+                    <label for="superGuc">Sahip Olmak İstediğin Süper Güç:</label><br>
+                    <input type="text" id="superGuc" name="superGuc" placeholder="Uçuş, görünmezlik, süper zeka vb." required>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Başvuru Detayı</legend>
+                <p>
+                    <label for="mesaj">Başvuru Mesajı (Neden Kahraman Ekibine Katılmalısınız?):</label><br>
+                    <textarea id="mesaj" name="mesaj" rows="6" cols="40" placeholder="Örneğin: Dövüş yetenekleriniz, dedektiflik becerileriniz veya ekipman kullanma beceriniz..." required></textarea>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">Ekibe Başvuruyu Gönder</button>
+            <button type="reset">Formu Temizle</button>
+        </form>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><a href="index.html">⬅️ Ana Sayfaya Geri Dön</a></p>
+        <p><small>&copy; 2026 Batman Projesi</small></p>
+    </footer>
+
+</body>
+</html>
