@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg-gotham: #0a0b10;       
+    --surface-dark: #151821;   
+    --bat-yellow: #f1c40f;      
+    --bat-blue: #00e5ff;       
+    --text-main: #e2e8f0;       
+    --text-muted: #94a3b8;      
+    --font-tech: 'Share Tech Mono', monospace; 
+    --font-text: 'Exo 2', sans-serif;         
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-gotham);
+    color: var(--text-main);
+    font-family: var(--font-text);
+    line-height: 1.6;
+}
+hr{
+    display: none;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 11, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--bat-yellow);
+    padding: 25px 20px;
+    text-align: center;
+}
+nav ul li a, nav ul li strong{
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: var(--font-tech);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+nav ul li strong, nav ul li a:hover{
+    color: var(--bat-yellow);
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.6);
+}
+ul{
+    list-style: none;
+}
+main{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--surface-dark);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.15);
+}
+h2, h3{
+    font-family: var(--font-tech);
+    color: var(--bat-blue);
+    margin-top: 35px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+p{
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+mark{
+    background-color: var(--bat-yellow);
+    color: #111;
+    padding: 2px 6px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+ul li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--bat-yellow);
+    font-family: var(--font-tech);
+    font-weight: bold;
+}
+header ul li::before {
+    display: none;
+}
+details{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #ff3333;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 0 6px;
+    transition: all 0.3s ease;
+}
+details[open]{
+    background-color: rgba(255, 51, 51, 0.1);
+    border-left-color: var(--bat-yellow);
+}
+summary{
+    font-family: var(--font-tech);
+    font-size: 1.1rem;
+    color: var(--text-main);
+    cursor: pointer;
+    letter-spacing: 1px;
+    list-style: none;
+}
+/* Chrome/Safari için oku gizler */
+/* summary::-webkit-details-marker {
+    display: none;   
+} */
+summary::before {
+    content: '[ + ] ';
+    color: #ff3333;
+    font-weight: bold;
+    margin-right: 5px;
+}
+details[open] summary::before {
+    content: '[ - ] ';
+    color: var(--bat-yellow);
+}
+details p{
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #ccc;
+    font-size: 1rem;
+    padding-left: 25px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse; /*!!!!!*/
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--bat-blue);
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+/* Tablonun en alt satırındaki hücrelerin alt çizgisini iptal ederiz ki, tablonun kendi ana çerçevesi (bat-blue) ezilmesin */
+tr:last-child td {
+    border-bottom: none;
+}
+th {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: var(--bat-yellow);
+    font-family: var(--font-tech);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+tr {
+    transition: all 0.2s ease;
+}
+tr:hover {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: var(--text-main);
+    cursor: crosshair; /* İmleci yuvarlak bir hedef belirleme ikonuna çevirir */
+}
+footer{
+    text-align: center;
+}
+/* --- BÖLÜM 3: GİZLİ BAŞVURU FORMU (BATCOMPUTER UPLINK) --- */
+
+/* Çerçeveler (Fieldset) - Teknolojik paneller gibi görünsün */
+fieldset {
+    border: 1px solid rgba(0, 229, 255, 0.3); /* Yarı saydam mavi sınır */
+    background-color: rgba(0, 0, 0, 0.3); /* İçerisi hafif karanlık */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* Kutu Başlıkları (Legend) */
+legend {
+    font-family: var(--font-tech);
+    color: var(--bat-yellow);
+    font-size: 1.2rem;
+    padding: 0 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(241, 196, 15, 0.4); /* Sarı neon parlama */
+}
+
+/* Başlık Etiketleri (Label) */
+label {
+    font-family: var(--font-tech);
+    color: var(--bat-blue);
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
+
+/* Yazı Kutuları (Input ve Textarea) */
+input[type="text"], textarea {
+    width: 100%;
+    background-color: rgba(10, 11, 16, 0.8); /* Neredeyse siyah */
+    border: 1px solid rgba(148, 163, 184, 0.3); /* Pasif gri sınır */
+    color: var(--text-main);
+    padding: 12px 15px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-family: var(--font-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none; /* Tarayıcının o çirkin varsayılan mavi çizgisini siler */
+}
+
+/* YAZI KUTUSUNA TIKLANINCA (FOCUS) - Dedektif Modu Etkileşimi */
+input[type="text"]:focus, textarea:focus {
+    border-color: var(--bat-blue); /* Sınırlar neon mavi olur */
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2); /* Dışarı mavi ışık saçar */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Kutunun İçindeki Silik İpuçları (Placeholder) */
+::placeholder {
+    color: rgba(148, 163, 184, 0.4);
+    font-style: italic;
+}
+
+/* --- BUTONLAR (Taktiksel Arayüz) --- */
+button[type="submit"], button[type="reset"] {
+    font-family: var(--font-tech);
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* GÖNDER BUTONU - Ana Aksiyon */
+button[type="submit"] {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: var(--bat-yellow);
+    border: 1px solid var(--bat-yellow);
+}
+
+/* Gönder Butonu Hover Etkisi */
+button[type="submit"]:hover {
+    background-color: var(--bat-yellow);
+    color: #000; /* Yazı siyah olur, zemin sarı! */
+    box-shadow: 0 0 20px rgba(241, 196, 15, 0.5);
+    transform: translateY(-2px); /* Tıklanma hissi için hafif yukarı kalkar */
+}
+
+/* TEMİZLE BUTONU - İkincil / Tehlike Aksiyonu */
+button[type="reset"] {
+    background-color: rgba(255, 51, 51, 0.05);
+    color: #ff3333; /* Tehlike Kırmızısı */
+    border: 1px solid rgba(255, 51, 51, 0.5);
+}
+
+/* Temizle Butonu Hover Etkisi */
+button[type="reset"]:hover {
+    background-color: #ff3333;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
+}
+/* --- BÖLÜM 4: LİNKLER VE ALT BİLGİ (FOOTER) --- */
+
+/* Ana gövde ve footer içindeki bağlantılar */
+main a, footer a {
+    color: var(--bat-yellow); /* Varsayılan mavi yerine Bat-Sarı */
+    text-decoration: none;    /* O çirkin alt çizgiyi yok ettik */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Linklerin Üzerine Gelince (Hover) */
+main a:hover, footer a:hover {
+    color: var(--bat-blue); /* Sarıdan neon maviye çok şık bir geçiş */
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5); /* Mavi parlama */
+}
+
+/* FOOTER (Alt Bilgi Terminali) */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px; /* Üstteki içerikle arasına nefes alma boşluğu */
+    border-top: 1px dashed rgba(241, 196, 15, 0.3); /* Kesik kesik sarı bir radar çizgisi */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Telif Hakkı Yazısı (<small> etiketi) */
+footer small {
+    color: rgba(148, 163, 184, 0.5); /* Göz yormayan, silik bir gri */
+    font-family: var(--font-tech);   /* Terminal fontu */
+    letter-spacing: 1px;
+}
+
